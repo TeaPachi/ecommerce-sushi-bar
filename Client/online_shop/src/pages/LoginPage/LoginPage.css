@@ -1,0 +1,88 @@
+.login-page-banner {
+    background-image: url('../../../public//images/banners/login_banner.jpeg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+
+}
+
+.login-page-title {
+    padding-bottom: 2%;
+    z-index: 1;
+    /* color: rgb(127, 100, 100); */
+    color: rgba(255, 255, 255, 0.9);
+    background: #000000c0;
+    width: 100%;
+    font-family: inherit !important;
+    font-weight: bold;
+}
+
+.login-page-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.login-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-form-container{
+    width: 50%;
+    height: 50%;
+    background-color: #f0b35e !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.login-page-button{
+    background-color: rgb(213, 77, 62) !important;
+    /* color: #fff !important; */
+}
+
+.login-page-button:hover{
+    background-color: rgb(232, 94, 79) !important;
+    /* color: #fff !important; */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 75%;
+}
+
+.login-redirect-to-register {
+    text-decoration: none;
+    color: #000;
+}
+
+.login-redirect-to-register:hover {
+    color: rgb(45, 44, 44);
+}
+
+.login-error {
+    height: 2px;
+    padding: 0;
+    margin: -40px;
+    color: rgb(191, 38, 38) !important;
+    font-weight: bold;
+
+}

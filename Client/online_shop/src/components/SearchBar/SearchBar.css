@@ -1,0 +1,26 @@
+.product-search-bar:before {
+    content: '';
+} 
+
+.product-search-bar{
+    border-radius: 50%;
+    width: 300px !important;
+    
+}
+
+input#free-solo-2-demo{
+    padding: 7.5px 4px 7.5px 55px !important;
+}
+
+.search-icon{
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+
+.search-bar-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row !important;
+    align-items: center;
+}

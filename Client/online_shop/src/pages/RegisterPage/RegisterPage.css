@@ -1,0 +1,74 @@
+.register-page-banner {
+    background-image: url('../../../public//images/banners/register_banner.jpg');
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: right;
+}
+
+/* .register-page-title {
+    padding-left: 5%;
+    z-index: 1;
+    /* color: rgb(127, 100, 100); 
+    color: rgba(255, 255, 255, 0.816);
+    background: rgba(30, 34, 36, 0.689);
+    width: 95%;
+    font-family: inherit !important;
+    font-weight: bold;
+} */
+
+.register-page-wrapper {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.register-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    max-width: 35vw !important;
+    height: 80vh;
+    align-items: center;
+    margin: 6% 5%;
+}
+
+.register-login-redirect-sentence{
+    font-size: 15px;
+}
+
+
+.register-login-redirect{
+    text-decoration: none;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55vh !important;
+    width: 250px;
+    align-items: center;
+    margin: 4px;
+}
+
+.register-page-button {
+    margin-top: 5% !important;
+}
+
+.register-paper-title{
+    margin-bottom: 5% !important;
+}
+
+.register-page-address-form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    height: 13vh;
+}

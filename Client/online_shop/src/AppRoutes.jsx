@@ -6,7 +6,6 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import HomePage from './pages/HomePage/HomePage';
 import Page404 from './pages/Page404/Page404';
 import Checkout from './pages/Checkout/Checkout';
-import TestPage from './pages/Test/TestPage';
 import { useSelector } from 'react-redux';
 
 const AppRoutes = () => {
@@ -15,8 +14,7 @@ const AppRoutes = () => {
   return (
     <Routes>
         <Route path="/register" element={<RegisterPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>\
-        <Route path='/test' element={<TestPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
         <Route path="/home" element={
           <ProtectedRoute isAuth={isAuth}>
             <HomePage />

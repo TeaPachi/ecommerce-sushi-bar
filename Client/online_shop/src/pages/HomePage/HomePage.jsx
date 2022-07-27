@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import ProductService from '../../services/ProductService';
-import { styled } from '@mui/material/styles';
 import { Box, Drawer, CssBaseline, IconButton, Grid, Typography, Button, Dialog, DialogTitle } from '@mui/material';
+import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
+import { styled } from '@mui/material/styles';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useSelector } from 'react-redux';
+import FormInput from '../../components/FormInput/FormInput';
 import CartDrawer from '../CartDrawer/CartDrawer';
 import CartService from '../../services/CartService';
+import ProductService from '../../services/ProductService';
 import './HomePage.css';
-import { useForm } from 'react-hook-form';
-import FormInput from '../../components/FormInput/FormInput';
 
 const drawerWidth = 370;
 

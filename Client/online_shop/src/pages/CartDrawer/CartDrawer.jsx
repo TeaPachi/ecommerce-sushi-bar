@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Button, List, Divider, Box, IconButton } from '@mui/material';
-import CartService from '../../services/CartService';
-import ProductService from '../../services/ProductService';
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import CartService from '../../services/CartService';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartProductItem from '../../components/CartProductItem/CartProductItem';
 import './CartDrawer.css';
@@ -14,7 +12,6 @@ const CartDrawer = ({filteredCarts}) => {
 
   const submitCart = () => {
     if (filteredCarts) {
-      // console.log(`from cartdrawer: ${filteredCarts}`) 
       navigate('/checkout', {state: {filteredCarts, test: 3}})
     } else {
     console.log('add products to cart first') 

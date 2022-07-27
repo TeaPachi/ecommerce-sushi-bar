@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Box, Paper, Typography, Button } from '@mui/material';
-import './LoginPage.css';
 import { useForm } from 'react-hook-form';
-import FormInput from '../../components/FormInput/FormInput';
-import AuthService from '../../services/AuthService';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { toggleAuth } from '../../state/slices/authSlice';
 import { isAdmin, setUser } from '../../state/slices/userSlice';
 import { Link } from 'react-router-dom';
+import FormInput from '../../components/FormInput/FormInput';
+import AuthService from '../../services/AuthService';
+import './LoginPage.css';
 
 const LoginPage = () => {
     const dispatch = useDispatch();

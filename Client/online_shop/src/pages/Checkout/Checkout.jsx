@@ -5,10 +5,9 @@ import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import FormInput from '../../components/FormInput/FormInput';
 import CheckoutItem from '../../components/CheckoutItem/CheckoutItem';
-import './Checkout.css';
 import OrderService from '../../services/OrderService';
 import { fireAlert } from '../../utils/Alert';
-
+import './Checkout.css';
 
 const Checkout = () => {
     const location = useLocation();
@@ -65,7 +64,6 @@ const Checkout = () => {
             console.log(error)
         }
     }
-    // console.log(`cart products from checkout: ${JSON.stringify(location.state.filteredCarts)}`)
 
   return (
     <Box className="checkout-container">

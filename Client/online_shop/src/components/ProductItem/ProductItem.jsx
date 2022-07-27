@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Card, CardMedia, CardContent, Box, Button, Dialog, DialogTitle, TextField, } from '@mui/material';
+import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 import EditIcon from '@mui/icons-material/Edit';
 import CloseIcon from '@mui/icons-material/Close';
-import { useSelector } from 'react-redux';
 import ProductService from '../../services/ProductService';
-import './ProductItem.css';
 import CartService from '../../services/CartService';
-import { useForm } from 'react-hook-form';
+import './ProductItem.css';
 
 const ProductItem = ({product, id}) => {
   const [ openPopup, setOpenPopup ] = useState(false);

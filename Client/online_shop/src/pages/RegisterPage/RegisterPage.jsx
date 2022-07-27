@@ -1,13 +1,12 @@
 import React from 'react';
-import './RegisterPage.css';
 import { useForm } from 'react-hook-form';
-import AuthService from '../../services/AuthService';
-import FormInput from '../../components/FormInput/FormInput';
 import { Box, Button, Paper, Typography } from '@mui/material';
-// import { useSelector, useDispatch } from 'react-redux'; make it so the state address changes when the appropriate field are filled
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { fireAlert } from '../../utils/Alert';
+import AuthService from '../../services/AuthService';
 import CartService from '../../services/CartService';
+import FormInput from '../../components/FormInput/FormInput';
+import './RegisterPage.css';
 
 
 const RegisterPage = () => {
@@ -43,13 +42,7 @@ const RegisterPage = () => {
 
   return (
     <Box className="register-page-wrapper">
-        <Box className="register-page-banner">
-            {/* <Typography variant="h1" component="h1" className="register-page-title">
-                Welcome! 
-                <br/> 
-                <Typography variant="h4" component="p"> Register so you can order with us</Typography>
-            </Typography>  */}
-        </Box>
+        <Box className="register-page-banner"></Box>
         <Paper sx={{ maxWidth: 400 }} className="register-form-wrapper">
             <Typography className="register-paper-title" variant="h3" element="h3">Register</Typography>
             <div>

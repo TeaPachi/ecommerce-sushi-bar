@@ -3,8 +3,6 @@ import { Divider, Typography, Box } from '@mui/material';
 import './CheckoutItem.css';
 
 const CheckoutItem = ({product}) => {
-
-    // console.log(product)
   return (
     <Box className="checkoutProduct-container">
         <img className="checkoutProduct-image" src={`http://localhost:3000/${product.productId.image}`}></img>

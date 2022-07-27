@@ -1,8 +1,6 @@
 import React, { useState, useEffect }from 'react';
-import { Typography, Button, List, Divider, Box } from '@mui/material';
-import ProductService from '../../services/ProductService';
+import { Typography, Button, Divider, Box } from '@mui/material';
 import CartService from '../../services/CartService';
-import { useNavigate } from 'react-router-dom';
 import './CartProductItem.css';
 
 const CartProductItem = (cartProduct, filteredCarts) => {

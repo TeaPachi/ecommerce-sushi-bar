@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
 const connectDB = require('./utils/connectDB');
 const cookieParser = require('cookie-parser');
@@ -23,8 +22,6 @@ app.use('/product', require('./routes/product')) //product categories inside
 app.use('/auth', require('./routes/auth'))
 app.use('/cart', require('./routes/cart')) //cart products inside
 app.use('/order', require('./routes/order'))
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 app.all('*', (req, res, next) => {
     next(new AppError('page not found'), 404)

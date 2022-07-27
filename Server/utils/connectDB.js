@@ -2,11 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.DB_URL,
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true
-            })
+        await mongoose.connect(`${process.env.DB_URL}/ecommerce`)
         console.log(`connected to mongoose`)
     } catch (err) {
         console.log(err)

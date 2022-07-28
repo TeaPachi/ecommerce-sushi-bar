@@ -6,6 +6,11 @@ const cookieParser = require('cookie-parser');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const cors = require('cors');
+const initDB = require('./utils/initDB');
+
+
+// Run to initialize project with products and a user:
+// initDB();
 
 connectDB();
 app.use(express.json());

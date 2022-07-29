@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import CartService from '../../services/CartService';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartProductItem from '../../components/CartProductItem/CartProductItem';
+import { fireAlert } from '../../utils/Alert';
 import './CartDrawer.css';
 
 const CartDrawer = ({filteredCarts}) => {
@@ -11,10 +12,10 @@ const CartDrawer = ({filteredCarts}) => {
   let [ total, setTotal ] = useState(0)
 
   const submitCart = () => {
-    if (filteredCarts) {
+    if (filteredCarts.length !== 0) {
       navigate('/checkout', {state: {filteredCarts}})
     } else {
-    console.log('add products to cart first') 
+      fireAlert('You have no cart products', 'add products to cart first', true) 
     }
   }
 

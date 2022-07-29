@@ -130,7 +130,7 @@ const ProductItem = ({product, id}) => {
                 </>
               }
                 <Button onClick={countDown}>-</Button>
-                  <span>{tempPrice}</span>
+                  <span>{`${tempPrice} ₪`}</span>
                 <Button onClick={countUp}>+</Button>
                 <Button type="submit">Save</Button>
               </form>

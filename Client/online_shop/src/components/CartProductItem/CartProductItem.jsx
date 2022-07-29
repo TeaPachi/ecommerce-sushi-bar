@@ -3,7 +3,7 @@ import { Typography, Button, Divider, Box } from '@mui/material';
 import CartService from '../../services/CartService';
 import './CartProductItem.css';
 
-const CartProductItem = (cartProduct, filteredCarts) => {
+const CartProductItem = (cartProduct) => {
     const [ tempQuantity, setTempQuantity ] = useState(cartProduct.cartProduct.quantity)
     const [ result, setResult ] = useState()
     const removeCartProduct = async (id) => {

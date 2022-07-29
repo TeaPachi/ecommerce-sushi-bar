@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Box, Drawer, CssBaseline, IconButton, Grid, Typography, Button, Dialog, DialogTitle } from '@mui/material';
+import { Box, Drawer, CssBaseline, IconButton, Grid, Typography, Button, Dialog, DialogTitle, Badge } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import { styled } from '@mui/material/styles';
@@ -52,6 +52,7 @@ const HomePage = () => {
   const [ isChecked, setIsChecked ] = useState({ hot: false, new: false });
   const [ openPopup, setOpenPopup ] = useState(false);
   const [ open, setOpen ] = useState(false);
+  const [ totalQuantity, setTotalQuantity ] = useState(0);
 
   const isAdmin = useSelector((state) => state.user.admin)
   const userAddress = useSelector((state) => state.user)
@@ -68,31 +69,30 @@ const HomePage = () => {
 
   useEffect(() => {
     ProductService.getAllProductCategories().then((res) => setCategories(res.data.data))
-  })
-  
-  useEffect(() => {
     ProductService.getAllProducts().then((res) => setProducts(res.data.data))
-  }) 
-
-  useEffect(() => {
     CartService.getAllCartProducts().then((res) => setAllCarts(res.data.data))
-  }) 
+  })
 
   function getCategorySelected(event) {
     setCategorySelected(event.target.innerHTML)
-    console.log(categorySelected)
   }
 
   function getProductSearched(event) {
     setCategorySelected(event.target.value)
-    console.log(categorySelected)
   }
 
   const showOnlyUserCart = () => {
     return allCarts.filter((cProduct) => cProduct.cartId.customerId === currentUser.id)
   }
-
+  
   let filteredCarts = useMemo( showOnlyUserCart, [currentUser.id, allCarts] )
+
+  let tempQuantity = 0;
+
+  useEffect(() => {
+    filteredCarts.forEach((cProduct) => tempQuantity += cProduct.quantity) 
+    setTotalQuantity(tempQuantity)
+  }, [allCarts])
 
   const handleDrawerClose = () => {
     setOpen(false);
@@ -147,7 +147,10 @@ const HomePage = () => {
             sx={{ mr: 2, ...(open && { display: 'none' }) }}
             onClick={handleDrawerOpen}
           >
-          { isAdmin ?  null : <ShoppingCartIcon/> } 
+          { isAdmin ?  null :
+           <Badge badgeContent={totalQuantity} color="secondary">
+            <ShoppingCartIcon/>
+          </Badge> } 
           </IconButton>
         </Box>
       <Drawer 

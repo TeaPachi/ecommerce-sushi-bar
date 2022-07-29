@@ -12,7 +12,7 @@ const CartDrawer = ({filteredCarts}) => {
 
   const submitCart = () => {
     if (filteredCarts) {
-      navigate('/checkout', {state: {filteredCarts, test: 3}})
+      navigate('/checkout', {state: {filteredCarts}})
     } else {
     console.log('add products to cart first') 
     }
